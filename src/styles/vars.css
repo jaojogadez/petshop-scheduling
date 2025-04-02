@@ -5,13 +5,13 @@
   /* Content Colors */
   --content-primary: #ffffff;
   --content-secondary: #9999d0;
-  --content-tertiary: #666666;
+  --content-tertiary: #98959D;
   --content-brand: #9282fa;
 
   /* Background Colors */
-  --background-primary: #151515;
+  --background-primary: #14151D;
   --background-secondary: #1e1e1e;
-  --background-tertiary: #22242c;
+  --background-tertiary: #23242C;
   --background-brand: #9282fa;
   --background-highlights: #8d84fa;
 
@@ -41,4 +41,16 @@
 
   --label-small: normal medium 12px/16px  "Inter", sans-serif;
 
+}
+
+body, html {
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+  font-family: "Inter";
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
