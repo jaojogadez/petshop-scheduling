@@ -51,6 +51,15 @@ body, html {
   color: var(--content-primary);
   font-family: "Inter";
 }
+.modal-content {
+  background-color: var(--background-tertiary);
+  color: var(--content-primary);
+}
+.modal-header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+}
 .logo {
   position: absolute;
   top: 0;
@@ -103,7 +112,6 @@ header.row {
   border: 0;
   height: 48px;
   font-weight: normal;
-  box-shadow: 0 0 20px -2px var(--content-brand);
 }
 .btn-primary:hover,
 .btn-primary:active {
@@ -117,6 +125,9 @@ header.row {
   position: absolute;
   right: 2rem;
   bottom: 1rem;
+}
+.btn-lg {
+  box-shadow: 0 0 20px -2px var(--content-brand);
 }
 footer {
   background-color: var(--background-tertiary);
