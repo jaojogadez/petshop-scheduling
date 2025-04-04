@@ -14,6 +14,9 @@
   --background-tertiary: #23242C;
   --background-brand: #9282fa;
   --background-highlights: #8d84fa;
+  --background-hover: #BDB4FA;
+
+  --text: #050505; 
 
   /* Border Colors */
   --border-primary: #3e3c41;
@@ -47,7 +50,6 @@ body, html {
   background-color: var(--background-primary);
   color: var(--content-primary);
   font-family: "Inter";
-  min-height: 100vh;
 }
 .logo {
   position: absolute;
@@ -93,42 +95,40 @@ header.row {
   cursor: pointer;
   background: url("../assets/set-bottom.svg") no-repeat;
 }
-/* Seção de Agendamentos */
-.schedule-period {
-  background-color: var(--background-tertiary);
-  border-radius: 1rem;
-}
-.schedule-period header {
+.btn-primary {
   font: var(--label-large);
+  text-transform: uppercase;
+  color: var(--text);
+  background-color: var(--content-brand);
+  border: 0;
+  height: 48px;
+  font-weight: normal;
+  box-shadow: 0 0 20px -2px var(--content-brand);
 }
-.schedule-period .me-auto {
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--background-hover) !important;
+  color: var(--text) !important;
+}
+.btn-primary:active {
+  transform: scale(0.95);
+}
+.desktop-button {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+}
+footer {
+  background-color: var(--background-tertiary);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  padding: 2.575rem;
 }
-.schedule-period .border-bottom {
-  border-color: var(--border-divider) !important;
-}
-.period li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2.5rem;
-  color: var(--content-tertiary);
-  line-height: 2rem;
-}
-.schedule-period .header-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.schedule-period .header-item strong {
-  color: var(--content-primary);
-}
-.remove-item:hover {
-  cursor: pointer;
-  text-decoration: underline;
+@media (max-width: 1200px ) {
+  .desktop-button {
+    display: none;
+  }
 }
 @media (max-width: 768px ) {
   .input {

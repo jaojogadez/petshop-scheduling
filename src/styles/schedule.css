@@ -1,5 +1,50 @@
 @import url("./vars.css");
-
-.section header {
-    margin-top: 5rem !important;
+/* Seção de Agendamentos */
+.schedule-period {
+  background-color: var(--background-tertiary);
+  border-radius: 1rem;
+}
+.schedule-period header {
+  font: var(--label-large);
+}
+.schedule-period .me-auto {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.schedule-period .border-bottom {
+  border-color: var(--border-divider) !important;
+}
+.period li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 2.5rem;
+  color: var(--content-tertiary);
+  line-height: 2rem;
+}
+.schedule-period .header-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 0.6;
+  min-width: 200px;
+}
+.service-item {
+  flex: 0 1 auto;
+}
+.schedule-period .header-item strong {
+  color: var(--content-primary);
+}
+.remove-item {
+  margin-left: auto;
+}
+.remove-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--content-primary);
+}
+.period {
+  width: 100%;
 }
