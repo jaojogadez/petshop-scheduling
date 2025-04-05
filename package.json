@@ -1,4 +1,10 @@
 {
+  "name": "petshop-scheduling",
+  "description": "Aplicação Web de agendamento para serviços de petshop.",
+  "author": "João Pedro D. Oliveira",
+  "scripts": {
+    "server": "json-server --watch server.json --port 3333"
+  },
   "dependencies": {
     "json-server": "^1.0.0-alpha.21"
   }
