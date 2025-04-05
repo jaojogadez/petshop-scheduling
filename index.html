@@ -129,7 +129,7 @@
       </section>
     </main>
     <footer class="container-fluid d-xl-none">
-      <button type="button" class="btn btn-primary btn-lg">
+      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#schedule-modal">
         <strong>Novo Agendamento</strong>
       </button>
     </footer>
@@ -158,7 +158,87 @@
               Preencha os dados do cliente para realizar o agendamento:
             </p>
           </div>
-          <div class="modal-body">...</div>
+          <form class="modal-body" method="post" autocomplete="off">
+            <!-- Nome do Tutor -->
+            <div class="mb-3">
+              <label for="tutor-name" class="form-label">Nome do Tutor</label>
+              <div class="input-group">
+                <span class="input-group-text" id="user-name">
+                  <img src="./src/assets/user.svg" alt="User's Icon">
+                </span>
+                <input type="text" class="form-control" aria-label="Tutor's name input" aria-describedby="user-name" id="tutor-name" placeholder="Heloise Oliveira" required>
+              </div>
+            </div>
+            <!-- Nome do Pet -->
+            <div class="mb-3">
+              <label for="pet-name" class="form-label">Nome do Pet</label>
+              <div class="input-group">
+                <span class="input-group-text" id="pet-icon">
+                  <img src="./src/assets/pet-paw.svg" alt="Pet's paw Icon">
+                </span>
+                <input type="text" class="form-control" aria-label="Pet's name input" aria-describedby="pet-icon" id="pet-name" placeholder="Jô Gabriel" required>
+              </div>
+            </div>
+            <!-- Telefone do Tutor -->
+            <div class="mb-3">
+              <label for="tutor-phone" class="form-label">Telefone do Tutor</label>
+              <div class="input-group">
+                <span class="input-group-text" id="phone-input">
+                  <img src="./src/assets/phone.svg" alt="Phone's Icon">
+                </span>
+                <input type="text" class="form-control" aria-label="Phone's input" aria-describedby="phone-input" id="tutor-phone" placeholder="(00) 00000-0000" required>
+              </div>
+            </div>
+            <!-- Descrição do Serviço -->
+            <div class="mb-3">
+              <label for="description" class="form-label">Descrição do serviço</label>
+              <textarea class="form-control textarea" id="description" rows="3" placeholder="Banho e tosa"></textarea>
+            </div>
+            <!-- Data e Hora -->
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="date" class="form-label">Data</label>
+                <div class="input mx-0">
+                  <i><img src="./src/assets/calendar.svg" alt="Calendário" /></i>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="hour" class="form-label">Hora</label>
+                <div class="input mx-0">
+                  <i><img src="./src/assets/clock.svg" alt="Calendário" /></i>
+                  <select class="form-select" aria-label="Default select example">
+                    <option disabled selected>Selecione um horário</option>
+                    <optgroup label="Manhã">
+                      <option value="9">9:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                    </optgroup>
+                    <optgroup label="Tarde">
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                    </optgroup>
+                    <optgroup label="Noite">
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                    </optgroup>  
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
           <div class="modal-footer border-0">
             <button type="button" class="btn btn-primary fw-bold">Agendar</button>
           </div>
