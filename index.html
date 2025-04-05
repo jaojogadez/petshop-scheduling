@@ -151,14 +151,14 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
+        <form class="modal-content" method="post" autocomplete="off">
           <div class="modal-header border-0">
             <h1 class="modal-title fs-5 title" id="schedule-modalLabel">Agende um atendimento</h1>
             <p class="paragraph-medium">
               Preencha os dados do cliente para realizar o agendamento:
             </p>
           </div>
-          <form class="modal-body" method="post" autocomplete="off">
+          <div class="modal-body">
             <!-- Nome do Tutor -->
             <div class="mb-3">
               <label for="tutor-name" class="form-label">Nome do Tutor</label>
@@ -213,7 +213,7 @@
                 <label for="hour" class="form-label">Hora</label>
                 <div class="input mx-0">
                   <i><img src="./src/assets/clock.svg" alt="Calendário" /></i>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" id="hour" aria-label="Default select example">
                     <option disabled selected>Selecione um horário</option>
                     <optgroup label="Manhã">
                       <option value="9">9:00</option>
@@ -238,11 +238,11 @@
                 </div>
               </div>
             </div>
-          </form>
-          <div class="modal-footer border-0">
-            <button type="button" class="btn btn-primary fw-bold">Agendar</button>
           </div>
-        </div>
+          <div class="modal-footer border-0">
+            <button type="submit" class="btn btn-primary fw-bold">Agendar</button>
+          </div>
+        </form>
       </div>
     </div>
 
