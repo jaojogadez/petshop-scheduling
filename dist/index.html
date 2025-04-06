@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petshop - Agendamento</title>
+    <link rel="shortcut icon" href="./src/assets/pet-paw.svg" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  <link rel="icon" href="pet-paw.svg"><script defer src="main.js"></script></head>
+  <body>
+    <main class="container col-md-7">
+      <img src="./src/assets/logo.png" alt="logo" class="logo shadow" />
+      <section class="section container p-0">
+        <header class="row mb-4">
+          <div class="col-xl-9">
+            <h1 class="title">Sua agenda</h1>
+            <p class="paragraph-medium">
+              Aqui você pode ver todos os clientes e serviços agendados para
+              hoje.
+            </p>
+          </div>
+          <div class="input col-xl-3">
+            <i><img src="./src/assets/calendar.svg" alt="Calendário" /></i>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+              autocomplete="off"
+            />
+          </div>
+        </header>
+        <!-- Seção de agendamentos -->
+        <aside class="schedules container p-0">
+          <!-- Morning -->
+          <section class="schedule-period">
+            <!-- Header -->
+            <header class="d-flex border-bottom p-3">
+              <div class="me-auto">
+                <img
+                  src="./src/assets/morning.png"
+                  alt="morning-sun-icon"
+                  class="img-morning"
+                />
+                <strong class="label-large">Manhã</strong>
+              </div>
+              <span class="paragraph-medium">09h-12h</span>
+            </header>
+            <!-- Schedules -->
+            <ul id="period-morning" class="period list-unstyled">
+              <li>
+                <div class="header-item">
+                  <strong id="hour">9:00</strong>
+                  <p class="m-0">
+                    <strong class="name-pet">Thor</strong> /
+                    <span class="name-person"> Fernanda Costa</span>
+                  </p>
+                </div>
+                <span class="service-item"> Vacinação </span>
+                <span class="remove-item"> Remover agendamento </span>
+              </li>
+            </ul>
+          </section>
+          <!-- Afternoon -->
+          <section class="schedule-period">
+            <!-- Header -->
+            <header class="d-flex border-bottom p-3">
+              <div class="me-auto">
+                <img
+                  src="./src/assets/afternoon.png"
+                  alt="morning-sun-icon"
+                  class="img-morning"
+                />
+                <strong class="label-large">Tarde</strong>
+              </div>
+              <span class="paragraph-medium">13h-18h</span>
+            </header>
+            <!-- Schedules -->
+            <ul id="period-morning" class="period list-unstyled">
+              <li>
+                <div class="header-item">
+                  <strong id="hour">14:00</strong>
+                  <p class="m-0">
+                    <strong class="name-pet">Mel</strong> /
+                    <span class="name-person"> João Souza </span>
+                  </p>
+                </div>
+                <span class="service-item"> Banho e Tosa </span>
+                <span class="remove-item"> Remover agendamento </span>
+              </li>
+            </ul>
+          </section>
+          <!-- Night -->
+          <section class="schedule-period">
+            <!-- Header -->
+            <header class="d-flex border-bottom p-3">
+              <div class="me-auto">
+                <img
+                  src="./src/assets/night.png"
+                  alt="morning-sun-icon"
+                  class="img-morning"
+                />
+                <strong class="label-large">Noite</strong>
+              </div>
+              <span class="paragraph-medium">19h-21h</span>
+            </header>
+            <!-- Schedules -->
+            <ul id="period-morning" class="period list-unstyled">
+              <li>
+                <div class="header-item">
+                  <strong id="hour">20:00</strong>
+                  <p class="m-0">
+                    <strong class="name-pet">Max</strong> /
+                    <span class="name-person"> Camila Santos </span>
+                  </p>
+                </div>
+                <span class="service-item"> Limpeza de Dentes </span>
+                <span class="remove-item"> Remover agendamento </span>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+    <footer class="container-fluid d-xl-none">
+      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#schedule-modal">
+        <strong>Novo Agendamento</strong>
+      </button>
+    </footer>
+    <!-- Modal Button -->
+    <button
+      type="button"
+      class="desktop-button btn btn-primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#schedule-modal"
+    >
+      <strong>Novo Agendamento</strong>
+    </button>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="schedule-modal"
+      tabindex="-1"
+      aria-labelledby="schedule-modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <form class="modal-content" method="post" autocomplete="off">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5 title" id="schedule-modalLabel">Agende um atendimento</h1>
+            <p class="paragraph-medium">
+              Preencha os dados do cliente para realizar o agendamento:
+            </p>
+          </div>
+          <div class="modal-body">
+            <!-- Nome do Tutor -->
+            <div class="mb-3">
+              <label for="tutor-name" class="form-label">Nome do Tutor</label>
+              <div class="input-group">
+                <span class="input-group-text" id="user-name">
+                  <img src="./src/assets/user.svg" alt="User's Icon">
+                </span>
+                <input type="text" class="form-control" aria-label="Tutor's name input" aria-describedby="user-name" id="tutor-name" placeholder="Heloise Oliveira" required>
+              </div>
+            </div>
+            <!-- Nome do Pet -->
+            <div class="mb-3">
+              <label for="pet-name" class="form-label">Nome do Pet</label>
+              <div class="input-group">
+                <span class="input-group-text" id="pet-icon">
+                  <img src="./src/assets/pet-paw.svg" alt="Pet's paw Icon">
+                </span>
+                <input type="text" class="form-control" aria-label="Pet's name input" aria-describedby="pet-icon" id="pet-name" placeholder="Jô Gabriel" required>
+              </div>
+            </div>
+            <!-- Telefone do Tutor -->
+            <div class="mb-3">
+              <label for="tutor-phone" class="form-label">Telefone do Tutor</label>
+              <div class="input-group">
+                <span class="input-group-text" id="phone-input">
+                  <img src="./src/assets/phone.svg" alt="Phone's Icon">
+                </span>
+                <input type="text" class="form-control" aria-label="Phone's input" aria-describedby="phone-input" id="tutor-phone" placeholder="(00) 00000-0000" required>
+              </div>
+            </div>
+            <!-- Descrição do Serviço -->
+            <div class="mb-3">
+              <label for="description" class="form-label">Descrição do serviço</label>
+              <textarea class="form-control textarea" id="description" rows="3" placeholder="Banho e tosa"></textarea>
+            </div>
+            <!-- Data e Hora -->
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="date" class="form-label">Data</label>
+                <div class="input mx-0">
+                  <i><img src="./src/assets/calendar.svg" alt="Calendário" /></i>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="hour" class="form-label">Hora</label>
+                <div class="input mx-0">
+                  <i><img src="./src/assets/clock.svg" alt="Calendário" /></i>
+                  <select class="form-select" id="hour" aria-label="Default select example">
+                    <option disabled selected>Selecione um horário</option>
+                    <optgroup label="Manhã">
+                      <option value="9">9:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                    </optgroup>
+                    <optgroup label="Tarde">
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                    </optgroup>
+                    <optgroup label="Noite">
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                    </optgroup>  
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="submit" class="btn btn-primary fw-bold">Agendar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
