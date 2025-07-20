@@ -13,3 +13,4 @@ import dayjs from "dayjs";
 // JS
 import "./modules/form/form-submit.js";
 import "./modules/page-load.js";
+import "./services/filter-date.js";

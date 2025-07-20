@@ -1,5 +1,8 @@
 import dayjs from "dayjs";
+import { apiConfig } from "../../services/api-config.js";
+
 const form = document.querySelector("form");
+const dateInput = document.querySelector("#date");
 const selectedDates = document.querySelectorAll("input[type='date']");
 
 const todayDate = dayjs(new Date()).format("YYYY-MM-DD");
@@ -28,7 +31,7 @@ form.onsubmit = async (event) => {
     hour: `${hour.value}:00`,
   };
 
-  await fetch("http://localhost:3333/schedules", {
+  await fetch(`${apiConfig.baseURL}/schedules`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
