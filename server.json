@@ -1,3 +1,22 @@
 {
-    "schedules": []
+  "schedules": [
+    {
+      "id": "36a4",
+      "pet": "Pedrinho",
+      "person": "Isa Lima ",
+      "service": "Banho no meu dog",
+      "phone": "14444",
+      "date": "2025-07-21",
+      "hour": "20:00"
+    },
+    {
+      "id": "9aba",
+      "pet": "Thor",
+      "person": "Fernanda ",
+      "service": "Limpeza de pelos",
+      "phone": "1493433434",
+      "date": "2025-07-24",
+      "hour": "14:00"
+    }
+  ]
 }

@@ -1,3 +1,3 @@
 export function schedulesDay() {
-    alert("Carregar agendamentos")
+    console.log("Carregar agendamentos")
 }
