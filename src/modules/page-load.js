@@ -5,3 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   schedulesDay();
   clearPastSchedules();
 });
+
+const selectedDate = document.querySelector("#date-header");
+selectedDate.addEventListener("change", () => {
+  schedulesDay();
+})
