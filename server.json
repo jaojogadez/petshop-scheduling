@@ -1,49 +1,13 @@
 {
   "schedules": [
     {
-      "id": "c9a2",
-      "pet": "Jô Gabriel de Oliveira",
-      "person": "Heloise Oliveira",
-      "service": "Banho Cheiroso",
-      "phone": "14998337645",
-      "date": "2025-07-20",
-      "hour": "18:00"
-    },
-    {
-      "id": "22b0",
-      "pet": "Thor",
-      "person": "Isabela Lima",
-      "service": "Compras de acessórios",
-      "phone": "7070",
-      "date": "2025-07-20",
+      "id": "3edb",
+      "pet": "Biel Miau",
+      "person": "Neto",
+      "service": "Banho",
+      "phone": "1423434",
+      "date": "2025-07-27",
       "hour": "15:00"
-    },
-    {
-      "id": "5873",
-      "pet": "Franjinha",
-      "person": "Maria",
-      "service": "verver",
-      "phone": "4343",
-      "date": "2025-07-20",
-      "hour": "16:00"
-    },
-    {
-      "id": "a379",
-      "pet": "a",
-      "person": "a",
-      "service": "a",
-      "phone": "a",
-      "date": "2025-07-21",
-      "hour": "9:00"
-    },
-    {
-      "id": "2cfd",
-      "pet": "b",
-      "person": "b",
-      "service": "b",
-      "phone": "b",
-      "date": "2025-07-21",
-      "hour": "10:00"
     }
   ]
 }
